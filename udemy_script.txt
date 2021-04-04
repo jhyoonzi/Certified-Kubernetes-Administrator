@@ -1,0 +1,1 @@
+if(typeof window.i!=='undefined'){clearInterval(window.i)}else{let lastText='';function check(){let toEl=$('.well--container--2edq4 span');let fromEl=$('p[data-purpose="transcript-cue-active"] span');let currentText=fromEl.html();if(lastText!==currentText){toEl.html(currentText)}lastText=fromEl.html()}window.i=setInterval(check,200)} 
