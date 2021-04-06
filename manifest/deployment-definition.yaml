@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: deployment-definition
+  name: deployment-definition
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deployment-definition
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: deployment-definition
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        resources: {}
+status: {}
