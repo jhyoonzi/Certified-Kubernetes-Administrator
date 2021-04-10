@@ -3,15 +3,28 @@ kind: Pod
 metadata:
   name: app
   namespace: elastic-stack
+  labels:
+    name: app
 spec:
   containers:
-    - image:  kodekloud/event-simulator
-      name: app 
-      volumeMounts:
-        - name:  log-volume
-        mountPath: /log
-    - image: kodekloud/filebeat-configured
-      name: sidecar
-      volumeMounts:
-        - name:  log-volume
-        mountPath:  /var/log/event-simulator
+  - name: app
+    image: kodekloud/event-simulator
+    volumeMounts:
+    - mountPath: /log
+      name: log-volume
+
+  - name: sidecar
+    image: kodekloud/filebeat-configured
+    volumeMounts:
+    - mountPath: /var/log/event-simulator/
+      name: log-volume
+
+  volumes:
+  - name: log-volume
+    hostPath:
+      # directory location on host
+      path: /var/log/webapp
+      # this field is optional
+      type: DirectoryOrCreate
+~                                                                                                                                       
+~                                                  
