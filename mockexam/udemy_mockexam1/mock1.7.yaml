@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: static-busybox
+spec:
+  containers:
+  - name: static-busybox
+    image: static-busybox
+    command: ["sleeep 2.0"]
+    args: ["1000"]
