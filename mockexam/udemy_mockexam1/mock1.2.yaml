@@ -8,3 +8,6 @@ spec:
   containers:
   - name: messaging
     image: redis:alpine
+
+#command
+# kubectl run messaging --image=redis:alpine

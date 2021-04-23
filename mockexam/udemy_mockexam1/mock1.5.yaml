@@ -10,4 +10,5 @@ spec:
     port:  6379
     protocol: TCP
 
-  
+#Command
+#kubectl expose pod messaging --type=ClusterIP --port=6379 --labels="tier=msg"

@@ -8,3 +8,5 @@ spec:
     image: static-busybox
     command: ["sleeep 2.0"]
     args: ["1000"]
+
+# /etc/kubernetes/manifest
