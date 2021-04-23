@@ -23,3 +23,8 @@
 * https://kubernetes.io/ko/docs/
 * https://github.com/kubernetes/
 * https://kubernetes.io/blog/
+
+개인 블로그 정리
+------------------------------------------
+* Pod - https://jh3859025.medium.com/kubernetes-pod-bb9ab58b4914
+* Replicaset - https://jh3859025.medium.com/kubernetes-replicaset-6ede8983d660
