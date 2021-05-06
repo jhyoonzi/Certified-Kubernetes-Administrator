@@ -1,0 +1,14 @@
+apiversion: v1
+kind: persistentVolumeClaim
+metadta:
+  name: claim-log-1
+  labels:
+    location: local
+spec:
+  accessModes:
+  - ReadWriteOnce
+  volmeMode: FileSystem
+  resources:
+    requests:
+      storage: 50Mi
+  storageClassName: manual
